@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+}
+
+.people {
+  grid-template-columns: repeat(2, 200px);
+  justify-content: center;
+  gap: 30px 40px;
+  padding: 30px 35px;
+  display: grid;
+}
+
+@media (width >= 1000px) {
+  .people {
+    grid-template-columns: repeat(4, 200px);
+  }
+}
+
+.photo {
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  display: flex;
+  position: relative;
+}
+
+.person img.person__photo {
+  object-fit: cover;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  width: 100%;
+}
+
+.person img.person__photo:hover {
+  border-radius: 60px;
+  transition: all 1s;
+  transform: scale(1.2);
+}
+
+.rank {
+  color: #8b0000;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 7px 11px;
+  position: absolute;
+  top: 40%;
+  right: 5px;
+  transform: translateY(-40%);
+}
+
+.person:hover {
+  background-color: #eee;
+  border-radius: 12px;
+  padding: 15px;
+  transition: opacity .2s ease-in-out;
+  scale: 1.2;
+}
+
+.name {
+  color: #2f4f4f;
+  justify-content: center;
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 23px;
+  display: flex;
+}
+
+.extra {
+  color: #000;
+  text-align: center;
+  visibility: hidden;
+  margin-top: 10px;
+  font-family: Arial;
+  font-size: 21.6px;
+  line-height: 24.84px;
+  transition: opacity .2s ease-in-out;
+}
+
+.person:hover .extra {
+  visibility: visible;
+  transition: opacity .2s ease-in-out;
+  display: block;
+}
+/*# sourceMappingURL=index.b1276d39.css.map */
